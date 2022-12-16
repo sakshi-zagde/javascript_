@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="salutation"><br>
+        <button onclick="greeting()">Dom write()</button>
+        <button onclick="salutation()">Dom By Id()</button>
+        <button onclick="course()">Dom By Name()</button>
+        <button onclick="tags()">Dom By Tags()</button>
+    </hr>
+    <h3>GetElementByName</h3>
+    HTML <input type="radio" name="UI" value="html">
+    CSS <input type="radio" name="UI" value="css">
+    Js <input type="radio" name="UI" value="js">
+    ReactJs <input type="radio" name="UI" value="react">
+   <hr/>
+   <output></output>
+</div>
+<script>
+    var courses=document.getElementsByName("UI")
+    function greeting(){
+        //to write on the webpage using the DOM method 
+        document.write("DOM hierarchy learning model")
+    }
+    function salutation(){
+        var uname=prompt("enter username");
+        var sal=document.getElementsById("salutation").value
+        alert("welcome",sal+","+uname)
+    }
+    /*function course(){
+        var courses=document.getElementsByName("UI");
+        alert("total number of courses are:"+courses.length)
+        //length property helps you to get the number of courses
+        alert(courses);
+    }*/
+    function course(){
+    var courses = document.getElementsByName("UI")
+    alert("Total number of courses are :"+ courses.length);
+    //length property helps you to get the number of courses
+    for(var i=0;i<courses.length;i++){
+        //alert(courses[i].value +",") ;
+        var coursesvalues = courses[i].value  + ",";
+        alert(coursesvalues);
+    }
+//alert(courses);
+}
+    function tags(){
+        var output=document.getElementsByTagName("OUTPUT");
+        output[0].value="no of courses"+ courses.length +"end of element tag";
+    }
+</script>
+</body>
+</html>
+

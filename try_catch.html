@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1> Exception Demo using throw keyword</h1>
+        <p style="color:red" id="errmsg"></p>
+    </div>
+    <script>
+        function ValidMonth(month){
+            //array index starts from [0-11]
+            //but for the months the values are[1-12]
+            month=month-1;
+            var month=new Array('jan','feb','mar','april','may','june','july','aug','sept','oct','nov','dec');
+            if (months[month]!=null){
+                return months[month];
+            }
+            else{
+                console.log("catch the exception using throw"+month);
+                throw 'MonthOutOfRange';
+                //use the throw keyword  an exception
+                throw (new Error("MonthOutOfRange"))
+            }
+        }
+        try{
+            var monthresult=ValidMonth(3);
+            console.log("Error occured:"+e);
+
+        }
+        catch (e){
+                //to record exeption messege
+                alert("",+e.messege)
+            }
+            finally{
+                alert("end of exception")
+            }
+    </script>
+</body>
+</html>

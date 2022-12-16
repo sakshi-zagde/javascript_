@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="openwin()">Open window</button>
+        <button onclick="closewin()">Close window</button>
+        <button onclick="alertwin()">Alert</button>
+        <button onclick="prompwin()">Prompt</button>
+        <button onclick="confirmwin()">Confirm</button>
+    </div>
+    <script>
+        //global variable
+        
+        function openwin(){
+            windowobj=window.open("https://portal.accenture.com")
+        }
+        function closewin(){
+            //no need to mention the url of the window
+            windowobj=window.close();
+        }
+        function alertwin(){
+            username="sakshi";
+            window.alert("good afternoon,"+username)
+            alert("Thank you");
+        }
+        function prompwin(){
+           // var input ="enter your OB start date";
+            var input1=prompt("enter your OS start date");
+            alert("The batch start date is" +input1)
+        }
+        function confirmwin(){
+            var result=confirm("are you sure to save credential");
+            if (result==true)
+                alert("Saved Successfully")
+            else
+                alert("Save Failed")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Exeption Handling</h3>
+        Enter num1<input type="text" id="num1"/>
+        Enter num2<input type="text" id="num1"/>
+        <button onclick="div()">Exception1</button>
+    </div>
+    <script type="text/javascript">
+        function div(){
+            try{
+                //to read the first number
+                var a=documentById("num1").value;
+                //to read the second number
+                var b=DocumentById("num2").value;
+                if (b>0){
+                    var result=a/b;
+                    alert("division result is",+result)
+                }
+            }catch (e){
+                //to record exeption messege
+                alert("",+e.messege)
+            }
+            finally{
+                alert("end of exception")
+            }
+        }
+    </script>
+</body>
+</html>

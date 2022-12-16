@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Exeption Handling</h3>
+        Enter username<input type="text" id="username"/><br>
+        Enter password<input type="text" id="password"/><br>
+        Enter confirm_password<input type="text" id="confirm_password"/><br>
+        Enter date_of_joining<input type="number" id="date_of_joining"/><br>
+        Enter age<input type="number" id="age"/><br>
+        Enter stream<input type="text" id="stream"/><br>
+        <button onclick="reset()">Reset</button>
+        <button onclick="div()">Login</button>
+    </div>
+    <script type="text/javascript">
+        function div(){
+            try{
+                //to read the first number
+                var a=documentById("username").value;
+                //to read the second number
+                console.log(a)
+                var b=DocumentById("password").value;
+                console.log(b)
+                var c=DocumentById("confirm_password").value;
+                var d=DocumentById("date_of_joining").value;
+                var e=DocumentById("age").value;
+                var f=DocumentById("stream").value;
+                if (password==confirm_password){
+                    if (age>=18 & age<=24){
+                         alert("successfully login")
+                    }
+                
+                }
+            }catch (e){
+                //to record exeption messege
+                alert(e.messege)
+            }
+            finally{
+                alert("end of exception")
+            }
+        }
+        function reset(){
+            document.reset()
+            
+        }
+    </script>
+</body>
+</html>
